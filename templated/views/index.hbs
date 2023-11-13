@@ -4,20 +4,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="\css\style.css">
     <title>Document</title>
 </head>
 
 <body>
+    <style>
+        /* Styles for the product and cart */
+        /* Styles for product cards and cart */
+        .addtocard {
+            width: 100%;
+            height: auto;
+
+        }
+
+        button {
+            border-radius: 12px;
+            background-color: rgb(126, 123, 123);
+            color: black;
+            border: none;
+            padding: 0.5rem;
+            margin-left: 2rem;
+            transition: 0.4s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        /* General Styles */
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+        }
+
+        .add-to-cart {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .cart {
+            border: 1px solid #ccc;
+            padding: 30px;
+
+            top: 115px;
+            right: 10px;
+            width: 100%;
+            background-color: black;
+            color: white;
+
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        #cart-total {
+            font-weight: bold;
+        }
+
+        /* General Styles */
+
+
+
+
+
+
+
+
+        /* Style for the search container */
+
+
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+        .maining {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        /* Style for the search input field */
+        #searchInput {
+            padding: 5px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Style for the search button */
+        #searchButton {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Style for search results */
+        #searchResults {
+            margin-top: 20px;
+        }
+
+        /* Style for product items (you can customize this based on your needs) */
+        .product-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 0px;
+            text-align: center;
+        }
+
+
+
+
+
+
+
+
+        /* Style for the product list container */
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px;
+
+        }
+
+        /* Style for individual product items */
+        .product-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 50rem;
+            border-radius: 4px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        /* Style for product images */
+        .product-item img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #paynow {
+            padding: 0.5rem;
+            margin-left: 0rem;
+            width: 9rem;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .sing_in {
+            margin-left: 40rem;
+            
+           
+        }
+    </style>
 
     <section class=" top-txt ">
         <div class="head container ">
             <div class="head-txt ">
                 <p>Free shipping, 30-day return or refund guarantee.</p>
             </div>
-            <div class="sing_in_up ">
-                <a href="/sign_in">SIGN IN</a>
-                <a href="/sign_up">SIGN UP</a>
+            <div class="sing_in ">
+                <a href="/sign">SIGN IN </a>
+
+            </div>
+            <div class="login">
+                <a href="/login">login </a>
+
             </div>
         </div>
     </section>
@@ -32,392 +244,663 @@
             <ul class="menu-items">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#sellers">Shop</a></li>
-                <li><a href="#news">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-                 <li><a href="/chandan">chandan</a></li>
+                <li><a href="/logout">logout</a></li>
+                <li><a href="/secret">secret</a></li>
+                <li><a href="/chandansharma">chandansharma</a></li>
+                <li><a href="">contact us</a></li>
+                <li><a href="">locate us</a></li>
+                <li><a href="/placeordor">buy now</a></li>
+                <li><a href="">find us</a></li>
+                <li><a href="">membership</a></li>
+                <li><a href="">afiliate now</a></li>
+
             </ul>
             <div class="logo">
                 <img src="https://i.postimg.cc/TP6JjSTt/logo.webp" alt="">
             </div>
         </div>
     </nav>
-    <section id="home">
-        <div class="home_page ">
-            <div class="home_img ">
-                <img src="https://i.postimg.cc/t403yfn9/home2.jpg" alt="img ">
-            </div>
-            <div class="home_txt ">
-                <p class="collectio ">SUMMER COLLECTION</p>
-                <h2>FALL - WINTER<br>Collection 2023</h2>
-                <div class="home_label ">
-                    <p>A specialist label creating luxury essentials. Ethically crafted<br>with an unwavering commitment
-                        to exceptional quality.</p>
-                </div>
-                <button><a href="#sellers">SHOP NOW</a><i class='bx bx-right-arrow-alt'></i></button>
-                <div class="home_social_icons">
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <a href="#"><i class='bx bxl-pinterest'></i></a>
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                </div>
-            </div>
+
+
+
+    <div class="addtocart">
+        <div class="cart">
+            <h3>Shopping Cart</h3>
+            <ul id="cart-items">
+                <!-- Cart items will be added dynamically here -->
+            </ul>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+
+            <button type="btn" id="paynow">PayNow</button>
         </div>
-    </section>
+    </div>
+
+    {{!-- search method --}}
+
+
+    <div class="virat">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <button id="searchButton">Search</button>
+        </div>
+        <div id="searchResults">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+
+    {{!-- add to cart option --}}
+
+
+    <div class="mainchandan">
+        <div class="h1">chandan sharma</div>
+        <div>
+            <form>
+                <a href="/buytheshoes"><button type="button" action="/helloman" method="post">by me</button></a>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
 
     <section id="collection">
         <div class="collections container">
             <div class="content">
-                <img src="https://i.postimg.cc/Xqmwr12c/clothing.webp" alt="img" />
+                <a href="/view"><img src="https://i.postimg.cc/Xqmwr12c/clothing.webp" alt="img" /></a>
                 <div class="img-content">
                     <p>Clothing Collections</p>
-                    <button><a href="#sellers">SHOP NOW</a></button>
+                    <button><a href="" value="{{auth}}"">SHOP NOW</a></button>
+                </div>
+            </div>  e  
+            <div class=" content2">
+                            <img src="https://i.postimg.cc/8CmBZH5N/shoes.webp" alt="img" />
+                            <div class="img-content2">
+                                <p>Shoes Spring</p>
+                                <button><a href="#sellers">SHOP NOW</a></button>
+                            </div>
+                </div>
+                <div class="content3">
+                    <img src="https://i.postimg.cc/MHv7KJYp/access.webp" alt="img" />
+                    <div class="img-content3">
+                        <p>Accessories</p>
+                        <button><a href="#sellers">SHOP NOW</a></button>
+                    </div>
                 </div>
             </div>
-            <div class="content2">
-                <img src="https://i.postimg.cc/8CmBZH5N/shoes.webp" alt="img" />
-                <div class="img-content2">
-                    <p>Shoes Spring</p>
-                    <button><a href="#sellers">SHOP NOW</a></button>
-                </div>
-            </div>
-            <div class="content3">
-                <img src="https://i.postimg.cc/MHv7KJYp/access.webp" alt="img" />
-                <div class="img-content3">
-                    <p>Accessories</p>
-                    <button><a href="#sellers">SHOP NOW</a></button>
-                </div>
-            </div>
-        </div>
     </section>
+
+
+
+    {{!-- slider pegination by chandans sharma --}}
+
+
+
     <section id="sellers">
         <div class="seller container">
             <h2>Top Sales</h2>
+
             <div class="best-seller">
-                <div class="best-p1">
-                    <img src="https://i.postimg.cc/8CmBZH5N/shoes.webp" alt="img">
-                    <div class="best-p1-txt">
-                        <div class="name-of-p">
-                            <p>PS England Shoes</p>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                        </div>
-                        <div class="price">
-                            &dollar;37.24
-                            <div class="colors">
-                                <i class='bx bxs-circle red'></i>
-                                <i class='bx bxs-circle blue'></i>
-                                <i class='bx bxs-circle white'></i>
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="best-p1" id="shoes">
+
+                                    <a href="/view"><img src="https://i.postimg.cc/8CmBZH5N/shoes.webp" alt="img"></a>
+                                    <div class="best-p1-txt">
+                                        <div class="name-of-p">
+
+                                        </div>
+                                        <div class="rating">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bx-star'></i>
+                                            <i class='bx bx-star'></i>
+                                        </div>
+                                        <div class="price">
+
+                                            <div class="colors">
+                                                <i class='bx bxs-circle red'></i>
+                                                <i class='bx bxs-circle blue'></i>
+                                                <i class='bx bxs-circle white'></i>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+
+                                            <p>PS England Shoes</p>
+
+                                            <h1>Price: $19.99</h1>
+                                            <button class="add-to-cart" onclick="touchme()">Add to Cart</button>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                        <div class="buy-now">
-                            <button><a href="">Buy Now</a></button>
-                        </div>
-                        <!-- <div class="add-cart">
-                            <button>Add To Cart</button>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="best-p1">
-                    <img src="https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png" alt="img">
-                    <div class="best-p1-txt">
-                        <div class="name-of-p">
-                            <p>PS England Jacket</p>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                        </div>
-                        <div class="price">
-                            &dollar;17.24
-                            <div class="colors">
-                                <i class='bx bxs-circle green'></i>
-                                <i class='bx bxs-circle grey'></i>
-                                <i class='bx bxs-circle brown'></i>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="best-p1">
+                                    <img src="https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png"
+                                        alt="img">
+                                    <div class="best-p1-txt">
+                                        <div class="name-of-p">
+
+                                        </div>
+                                        <div class="rating">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bx-star'></i>
+                                            <i class='bx bx-star'></i>
+                                            <i class='bx bx-star'></i>
+                                        </div>
+                                        <div class="price">
+
+                                            <div class="colors">
+                                                <i class='bx bxs-circle green'></i>
+                                                <i class='bx bxs-circle grey'></i>
+                                                <i class='bx bxs-circle brown'></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="product">
+
+                                            <p>PS England shirt</p>
+
+                                            <h1>Price: $200.99</h1>
+                                            <button class="add-to-cart" onclick="touchme()">Add to Cart</button>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
                             </div>
                         </div>
-                        <div class="buy-now">
-                            <button><a href="">Buy Now</a></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="best-p1">
-                    <img src="https://i.postimg.cc/j2FhzSjf/bs2.png" alt="img">
-                    <div class="best-p1-txt">
-                        <div class="name-of-p">
-                            <p>PS England Shirt</p>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bx-star'></i>
-                        </div>
-                        <div class="price">
-                            &dollar;27.24
-                            <div class="colors">
-                                <i class='bx bxs-circle brown'></i>
-                                <i class='bx bxs-circle green'></i>
-                                <i class='bx bxs-circle blue'></i>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="best-p1">
+                                    <img src="https://i.postimg.cc/j2FhzSjf/bs2.png" alt="img">
+                                    <div class="best-p1-txt">
+                                        <div class="name-of-p">
+
+                                        </div>
+                                        <div class="rating">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bx-star'></i>
+                                        </div>
+                                        <div class="price">
+
+                                            <div class="colors">
+                                                <i class='bx bxs-circle brown'></i>
+                                                <i class='bx bxs-circle green'></i>
+                                                <i class='bx bxs-circle blue'></i>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+
+                                            <p>new launched skirt</p>
+
+                                            <h1>Price: $300.99</h1>
+                                            <button class="add-to-cart" onclick="touchme()">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="buy-now">
-                            <button><a href="">Buy Now</a></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="best-p1">
-                    <img src="https://i.postimg.cc/QtjSDzPF/bs3.png" alt="img">
-                    <div class="best-p1-txt">
-                        <div class="name-of-p">
-                            <p>PS England Shoes</p>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-                        <div class="price">
-                            &dollar;43.67
-                            <div class="colors">
-                                <i class='bx bxs-circle red'></i>
-                                <i class='bx bxs-circle grey'></i>
-                                <i class='bx bxs-circle blue'></i>
+
+
+
+
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="best-p1">
+                                    <img src="https://i.postimg.cc/QtjSDzPF/bs3.png" alt="img">
+                                    <div class="best-p1-txt">
+                                        <div class="name-of-p">
+
+                                        </div>
+                                        <div class="rating">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                        </div>
+                                        <div class="price">
+
+                                            <div class="colors">
+                                                <i class='bx bxs-circle red'></i>
+                                                <i class='bx bxs-circle grey'></i>
+                                                <i class='bx bxs-circle blue'></i>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+
+                                            <p>PS England Shoes</p>
+
+                                            <h1>Price: $19.99</h1>
+                                            <button class="add-to-cart" onclick="touchme()">Add to Cart</button>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="buy-now">
-                            <button><a href="">Buy Now</a></button>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="best-p1">
+                                    <img src="https://i.postimg.cc/QtjSDzPF/bs3.png" alt="img">
+                                    <div class="best-p1-txt">
+                                        <div class="name-of-p">
+
+                                        </div>
+                                        <div class="rating">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                        </div>
+                                        <div class="price">
+
+                                            <div class="colors">
+                                                <i class='bx bxs-circle red'></i>
+                                                <i class='bx bxs-circle grey'></i>
+                                                <i class='bx bxs-circle blue'></i>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+
+                                            <p>PS England Shoes</p>
+
+                                            <h1>Price: $19.99</h1>
+                                            <button class="add-to-cart" onclick="touchme()">Add to Cart</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    {{!-- <div class="swiper-pagination"></div> --}}
                 </div>
+
+
             </div>
         </div>
+
+
+
+        {{!-- end of one slider part --}}
+
+
+
+        {{!--
+        start of other slider --}}
+
+
+
         <div class="seller container">
             <h2>New Arrivals</h2>
             <div class="best-seller">
-                <div class="best-p1">
-                    <img src="https://i.postimg.cc/fbnB2yfj/na1.png" alt="img">
-                    <div class="best-p1-txt">
-                        <div class="name-of-p">
-                            <p>PS England T-Shirt</p>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-                        <div class="price">
-                            &dollar;10.23
-                            <div class="colors">
-                                <i class='bx bxs-circle blank'></i>
-                                <i class='bx bxs-circle blue'></i>
-                                <i class='bx bxs-circle brown'></i>
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="best-p1">
+                                    <img src="https://i.postimg.cc/j2FhzSjf/bs2.png" alt="img">
+                                    <div class="best-p1-txt">
+                                        <div class="name-of-p">
+
+                                        </div>
+                                        <div class="rating">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bx-star'></i>
+                                        </div>
+                                        <div class="price">
+
+                                            <div class="colors">
+                                                <i class='bx bxs-circle brown'></i>
+                                                <i class='bx bxs-circle green'></i>
+                                                <i class='bx bxs-circle blue'></i>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+
+                                            <p>new launched skirt</p>
+
+                                            <h1>Price: $300.99</h1>
+                                            <button class="add-to-cart" onclick="touchme()">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="buy-now">
-                            <button><a href="">Buy Now</a></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="best-p1">
-                    <img src="https://i.postimg.cc/zD02zJq8/na2.png" alt="img">
-                    <div class="best-p1-txt">
-                        <div class="name-of-p">
-                            <p>PS England Bag</p>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                        </div>
-                        <div class="price">
-                            &dollar;09.28
-                            <div class="colors">
-                                <i class='bx bxs-circle brown'></i>
-                                <i class='bx bxs-circle red'></i>
-                                <i class='bx bxs-circle green'></i>
+
+
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="best-p1">
+                                    <img src="https://i.postimg.cc/j2FhzSjf/bs2.png" alt="img">
+                                    <div class="best-p1-txt">
+                                        <div class="name-of-p">
+
+                                        </div>
+                                        <div class="rating">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bx-star'></i>
+                                        </div>
+                                        <div class="price">
+
+                                            <div class="colors">
+                                                <i class='bx bxs-circle brown'></i>
+                                                <i class='bx bxs-circle green'></i>
+                                                <i class='bx bxs-circle blue'></i>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+
+                                            <p>new launched skirt</p>
+
+                                            <h1>Price: $300.99</h1>
+                                            <button class="add-to-cart" onclick="touchme()">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="buy-now">
-                            <button><a href="">Buy Now</a></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="best-p1">
-                    <img src="https://i.postimg.cc/Dfj5VBcz/sunglasses1.jpg" alt="img">
-                    <div class="best-p1-txt">
-                        <div class="name-of-p">
-                            <p>PS England Sunglass</p>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-                        <div class="price">
-                            &dollar;06.24
-                            <div class="colors">
-                                <i class='bx bxs-circle grey'></i>
-                                <i class='bx bxs-circle blank'></i>
-                                <i class='bx bxs-circle blank'></i>
+
+
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="best-p1">
+                                    <img src="https://i.postimg.cc/j2FhzSjf/bs2.png" alt="img">
+                                    <div class="best-p1-txt">
+                                        <div class="name-of-p">
+
+                                        </div>
+                                        <div class="rating">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bx-star'></i>
+                                        </div>
+                                        <div class="price">
+
+                                            <div class="colors">
+                                                <i class='bx bxs-circle brown'></i>
+                                                <i class='bx bxs-circle green'></i>
+                                                <i class='bx bxs-circle blue'></i>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+
+                                            <p>new launched skirt</p>
+
+                                            <h1>Price: $300.99</h1>
+                                            <button class="add-to-cart" onclick="touchme()">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="buy-now">
-                            <button><a href="">Buy Now</a></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="best-p1">
-                    <img src="https://i.postimg.cc/FszW12Kc/na4.png" alt="img">
-                    <div class="best-p1-txt">
-                        <div class="name-of-p">
-                            <p>PS England Shoes</p>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-                        <div class="price">
-                            &dollar;43.67
-                            <div class="colors">
-                                <i class='bx bxs-circle grey'></i>
-                                <i class='bx bxs-circle red'></i>
-                                <i class='bx bxs-circle blue'></i>
+
+
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="best-p1">
+                                    <img src="https://i.postimg.cc/j2FhzSjf/bs2.png" alt="img">
+                                    <div class="best-p1-txt">
+                                        <div class="name-of-p">
+
+                                        </div>
+                                        <div class="rating">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bx-star'></i>
+                                        </div>
+                                        <div class="price">
+
+                                            <div class="colors">
+                                                <i class='bx bxs-circle brown'></i>
+                                                <i class='bx bxs-circle green'></i>
+                                                <i class='bx bxs-circle blue'></i>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+
+                                            <p>new launched skirt</p>
+
+                                            <h1>Price: $300.99</h1>
+                                            <button class="add-to-cart" onclick="touchme()">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="buy-now">
-                            <button><a href="">Buy Now</a></button>
-                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
                     </div>
+                    {{!-- <div class="swiper-pagination"></div> --}}
                 </div>
+
+
+
+
+
+
+
             </div>
         </div>
+
+
+
+        {{!-- end of the other slider --}}
+
+
+
         <div class="seller container">
             <h2>Hot Sales</h2>
             <div class="best-seller">
-                <div class="best-p1">
-                    <img src="https://i.postimg.cc/jS7pSQLf/na4.png" alt="img">
-                    <div class="best-p1-txt">
-                        <div class="name-of-p">
-                            <p>PS England Shoes</p>
+
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-slide">
+                                <div class="product">
+                                    <div class="best-p1">
+                                        <img src="https://i.postimg.cc/j2FhzSjf/bs2.png" alt="img">
+                                        <div class="best-p1-txt">
+                                            <div class="name-of-p">
+
+                                            </div>
+                                            <div class="rating">
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bx-star'></i>
+                                            </div>
+                                            <div class="price">
+
+                                                <div class="colors">
+                                                    <i class='bx bxs-circle brown'></i>
+                                                    <i class='bx bxs-circle green'></i>
+                                                    <i class='bx bxs-circle blue'></i>
+                                                </div>
+                                            </div>
+                                            <div class="product">
+
+                                                <p>new launched skirt</p>
+
+                                                <h1>Price: $300.99</h1>
+                                                <button class="add-to-cart" onclick="touchme()">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-                        <div class="price">
-                            &dollar;37.24
-                            <div class="colors">
-                                <i class='bx bxs-circle grey'></i>
-                                <i class='bx bxs-circle black'></i>
-                                <i class='bx bxs-circle blue'></i>
+
+
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="best-p1">
+                                    <img src="https://i.postimg.cc/j2FhzSjf/bs2.png" alt="img">
+                                    <div class="best-p1-txt">
+                                        <div class="name-of-p">
+
+                                        </div>
+                                        <div class="rating">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bx-star'></i>
+                                        </div>
+                                        <div class="price">
+
+                                            <div class="colors">
+                                                <i class='bx bxs-circle brown'></i>
+                                                <i class='bx bxs-circle green'></i>
+                                                <i class='bx bxs-circle blue'></i>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+
+                                            <p>new launched skirt</p>
+
+                                            <h1>Price: $300.99</h1>
+                                            <button class="add-to-cart" onclick="touchme()">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="buy-now">
-                            <button><a href="">Buy Now</a></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="best-p1">
-                    <img src="https://i.postimg.cc/fbnB2yfj/na1.png" alt="img">
-                    <div class="best-p1-txt">
-                        <div class="name-of-p">
-                            <p>PS England T-Shirt</p>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-                        <div class="price">
-                            &dollar;10.23
-                            <div class="colors">
-                                <i class='bx bxs-circle blank'></i>
-                                <i class='bx bxs-circle blue'></i>
-                                <i class='bx bxs-circle brown'></i>
+
+
+
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="best-p1">
+                                    <img src="https://i.postimg.cc/j2FhzSjf/bs2.png" alt="img">
+                                    <div class="best-p1-txt">
+                                        <div class="name-of-p">
+
+                                        </div>
+                                        <div class="rating">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bx-star'></i>
+                                        </div>
+                                        <div class="price">
+
+                                            <div class="colors">
+                                                <i class='bx bxs-circle brown'></i>
+                                                <i class='bx bxs-circle green'></i>
+                                                <i class='bx bxs-circle blue'></i>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+
+                                            <p>new launched skirt</p>
+
+                                            <h1>Price: $300.99</h1>
+                                            <button class="add-to-cart" onclick="touchme()">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="buy-now">
-                            <button><a href="">Buy Now</a></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="best-p1">
-                    <img src="https://i.postimg.cc/RhVP7YQk/hs1.png" alt="img">
-                    <div class="best-p1-txt">
-                        <div class="name-of-p">
-                            <p>PS England T-Shirt</p>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-                        <div class="price">
-                            &dollar;15.24
-                            <div class="colors">
-                                <i class='bx bxs-circle blank'></i>
-                                <i class='bx bxs-circle red'></i>
-                                <i class='bx bxs-circle blue'></i>
+
+
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="best-p1">
+                                    <img src="https://i.postimg.cc/j2FhzSjf/bs2.png" alt="img">
+                                    <div class="best-p1-txt">
+                                        <div class="name-of-p">
+
+                                        </div>
+                                        <div class="rating">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bx-star'></i>
+                                        </div>
+                                        <div class="price">
+
+                                            <div class="colors">
+                                                <i class='bx bxs-circle brown'></i>
+                                                <i class='bx bxs-circle green'></i>
+                                                <i class='bx bxs-circle blue'></i>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+
+                                            <p>new launched skirt</p>
+
+                                            <h1>Price: $300.99</h1>
+                                            <button class="add-to-cart" onclick="touchme()">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="buy-now">
-                            <button><a href="">Buy Now</a></button>
-                        </div>
+
+
+
+
+
+
+
+
+
+
                     </div>
+                    {{!-- <div class="swiper-pagination"></div> --}}
                 </div>
-                <div class="best-p1">
-                    <img src="https://i.postimg.cc/zD02zJq8/na2.png" alt="img">
-                    <div class="best-p1-txt">
-                        <div class="name-of-p">
-                            <p>PS England Bag</p>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                        </div>
-                        <div class="price">
-                            &dollar;09.28
-                            <div class="colors">
-                                <i class='bx bxs-circle blank'></i>
-                                <i class='bx bxs-circle grey'></i>
-                                <i class='bx bxs-circle brown'></i>
-                            </div>
-                        </div>
-                        <div class="buy-now">
-                            <button><a href="">Buy Now</a></button>
-                        </div>
-                    </div>
-                </div>
+
+
+
+
             </div>
         </div>
     </section>
@@ -447,8 +930,7 @@
                     <div class="date-news2">
                         <p><i class='bx bxs-calendar'></i> 17 February 2022</p>
                         <h4>The Health Benefits Of Sunglasses</h4>
-                        <a href=""
-                            target="_blank">read more</a>
+                        <a href="" target="_blank">read more</a>
                     </div>
                 </div>
             </div>
@@ -460,8 +942,7 @@
                     <div class="date-news3">
                         <p><i class='bx bxs-calendar'></i> 26 February 202</p>
                         <h4>Eternity Bands Do Last Forever</h4>
-                        <a href=""
-                            target="_blank">read more</a>
+                        <a href="" target="_blank">read more</a>
                     </div>
                 </div>
             </div>
@@ -471,7 +952,9 @@
         <div class="contact container">
             <div class="map">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14162.781748360452!2d85.35500431332736!3d27.114682618799492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb63eaffb7a9e5%3A0xe26664f1a35b6f09!2sGautam%20Hotel%20Chapur!5e1!3m2!1sen!2snp!4v1699123845699!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></>"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14162.781748360452!2d85.35500431332736!3d27.114682618799492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb63eaffb7a9e5%3A0xe26664f1a35b6f09!2sGautam%20Hotel%20Chapur!5e1!3m2!1sen!2snp!4v1699123845699!5m2!1sen!2snp"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></>"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -513,6 +996,7 @@
                 <a href="#sellers">Accessories</a>
                 <a href="#sellers">Sale</a>
             </div>
+
             <div class="content_3">
                 <h4>SHOPPING</h4>
                 <a href="./contact.html">Contact Us</a>
@@ -529,6 +1013,7 @@
                 </div>
                 <hr>
             </div>
+
         </div>
         <div class="f-design">
             <div class="f-design-txt container">
@@ -539,6 +1024,225 @@
 
 
     <script src="\js\index.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+    {{!-- another slider --}}
+
+    <script>
+        var swiper = new Swiper(".mySwipermy", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+
+
+    <script>
+        // Sample product data with images (replace with your own product data)
+        const products = [
+            {
+                name: "winter collections",
+                description: `
+
+    <div class="product-list">
+        <div class="product-item">
+            <img src="images/home2.jpg" alt="Product A">
+            <h2>Product A</h2>
+            <p>Description: This is product A.</p>
+            <p>Price: $10.00</p>
+              <button> <a href="#login">click here</a></button>
+
+        </div>
+        
+       
+    </div>
+
+`,
+                price: 10,
+                image: "images/home2.jpg",
+
+
+
+            },
+            {
+                name: "virat kohli",
+                description: `
+
+    <div class="product-list">
+        <div class="product-item">
+            <img src="images/virat.webp" alt="Product A">
+            <h2>Product A</h2>
+            <p>Description: This is product A.</p>
+            <p>Price: $10.00</p>
+              <button> <a href="#login">click here</a></button>
+
+        </div>
+        
+       
+    </div>
+
+`,
+
+
+
+
+            },
+
+            {
+                name: "chandan sharma",
+                description: `
+
+    <div class="product-list">
+        <div class="product-item">
+            <img src="images/1696966673096.jpg" alt="Product A">
+            <h2>Product A</h2>
+            <p>Description: This is product A.</p>
+            <p>Price: $10.00</p>
+              <button> <a href="#login">click here</a></button>
+
+        </div>
+        
+       
+    </div>
+
+`,
+
+
+
+
+            },
+
+            // Add more products here
+        ];
+
+        // Function to filter and display search results
+        function performSearch() {
+            const searchInput = document.getElementById("searchInput");
+            const searchResults = document.getElementById("searchResults");
+
+            // Clear previous search results
+            searchResults.innerHTML = "";
+
+            // Get the search query
+            const query = searchInput.value.trim().toLowerCase();
+
+            // Filter the products based on the query
+            const filteredProducts = products.filter(product =>
+                product.name.toLowerCase().includes(query) || product.description.toLowerCase().includes(query)
+            );
+
+            // Display the filtered results
+            if (filteredProducts.length === 0) {
+                searchResults.innerHTML = "No results found.";
+            } else {
+                filteredProducts.forEach(product => {
+                    const productItem = document.createElement("div");
+                    productItem.classList.add("product-item");
+                    productItem.innerHTML = `
+                <h2>${product.name}</h2>
+                
+                <p>${product.description}</p>
+                <p>Price: $${product.price}</p>
+            `;
+                    searchResults.appendChild(productItem);
+                });
+            }
+        }
+
+        // Attach the search function to the search button
+        const searchButton = document.getElementById("searchButton");
+        searchButton.addEventListener("click", performSearch);
+
+        // Listen for Enter key press in the search input field
+        const searchInput = document.getElementById("searchInput");
+        searchInput.addEventListener("keyup", function (event) {
+            if (event.key === "Enter") {
+                performSearch();
+            }
+        });
+
+
+    </script>
+
+
+    <script>
+
+        function touchme() {
+            alert("add to cart successfull");
+        }
+
+
+
+        // Initialize cart and total
+        // Initialize cart and total
+        let cart = [];
+        let total = 0;
+
+        // Select elements
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const cartItemsElement = document.getElementById('cart-items');
+        const cartTotalElement = document.getElementById('cart-total');
+
+        // Function to update the cart display
+        function updateCart() {
+            cartItemsElement.innerHTML = '';
+            total = 0;
+
+            cart.forEach((item, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - $${item.price}`;
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.addEventListener('click', () => {
+                    cart.splice(index, 1);
+                    updateCart();
+                });
+
+                listItem.appendChild(removeButton);
+
+                cartItemsElement.appendChild(listItem);
+                total += item.price;
+            });
+
+            cartTotalElement.textContent = total.toFixed(2);
+        }
+
+        // Add click event listener to each "Add to Cart" button
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const product = button.parentElement;
+                const name = product.querySelector('p').textContent;
+
+                const price = parseFloat(product.querySelector('h1').textContent.slice(8));
+
+                cart.push({ name, price });
+                updateCart();
+            });
+        });
+
+
+
+    </script>
 </body>
 
 

@@ -1,0 +1,190 @@
+13.com/mobalti/open-props-interfaces/main/image-gallery/images/img-2.webp"
+                                                                    alt="A cute cat" loading="lazy" />
+                                                            </picture>
+                                                            <picture>
+                                                                <img width="309" height="309"
+                                                                    src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-3.webp"
+                                                                    alt="A cute cat" loading="lazy" />
+                                                            </picture>
+                                                            <picture>
+                                                                <img width="309" height="309"
+                                                                    src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-4.webp"
+                                                                    alt="A cute cat" loading="lazy" />
+                                                            </picture>
+                                                            <picture>
+                                                                <img width="309" height="309"
+                                                                    src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-5.webp"
+                                                                    alt="A cute cat" loading="lazy" />
+                                                            </picture>
+                                                            <picture>
+                                                                <img width="309" height="309"
+                                                                    src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-6.webp"
+                                                                    alt="A cute cat" loading="lazy" />
+                                                            </picture>
+
+
+                                                        </div>
+                                                        <div class="controls">
+                                                            <button id="prevBtn" onclick="carousel.scrollBy(-100, 0)">
+                                                                <i class="ri-arrow-left-circle-fill"></i>
+                                                            </button>
+                                                            <button id="nextBtn" onclick="carousel.scrollBy(100, 0)">
+                                                                <i class="ri-arrow-right-circle-fill"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <button id="closeDialogBtn" class="closeDialog">
+                                                        <i class="ri-close-line"></i>
+                                                    </button>
+                                                </dialog>
+                                            </section>
+                                        </main>
+
+
+
+
+                                    </body>
+                                </div>
+                            </div>
+
+                            <button type="txt" id="styling_button">buy now</button> <span> <button id="styling_butt"
+                                    onclick="styling_butt()">add
+                                    to
+                                    cart</button></span>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        var appendNumber = 4;
+        var prependNumber = 1;
+        document
+            .querySelector(".prepend-2-slides")
+            .addEventListener("click", function (e) {
+                e.preventDefault();
+                swiper.prependSlide([
+                    '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+                    '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+                ]);
+            });
+        document
+            .querySelector(".prepend-slide")
+            .addEventListener("click", function (e) {
+                e.preventDefault();
+                swiper.prependSlide(
+                    '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
+                );
+            });
+        document
+            .querySelector(".append-slide")
+            .addEventListener("click", function (e) {
+                e.preventDefault();
+                swiper.appendSlide(
+                    '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
+                );
+            });
+        document
+            .querySelector(".append-2-slides")
+            .addEventListener("click", function (e) {
+                e.preventDefault();
+                swiper.appendSlide([
+                    '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+                    '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+                ]);
+            });
+    </script>
+
+
+
+    <script>
+        const detailing = document.getElementById('detailing');
+        function hidingdata() {
+
+            if (detailing.style.display === 'none') {
+                detailing.style.transition = '0.4s'
+                detailing.style.display = 'block';
+            } else {
+                detailing.style.display = 'none'
+            }
+
+
+
+        }
+
+
+    </script>
+
+    <script>
+        {{!-- const styling_butt = document.getElementById('styling_butt'); --}}
+        function styling_butt() {
+            alert("add to cart successfull.")
+
+        }
+
+    </script>
+
+
+
+
+    {{!-- for color family for slider for the image in the color family --}}
+    <script>
+        const dialog = document.querySelector('#dialog');
+        const images = document.querySelectorAll('.imageGallery button');
+        const closeDialogBtn = document.querySelector('#closeDialogBtn');
+
+        function openDialog(index) {
+            if (!document.startViewTransition) {
+                dialog.showModal();
+                document.querySelectorAll('#carousel img')[index].scrollIntoView();
+            } else handleTransition(index);
+        }
+
+        // Wait until the transition finished and the dialog opens before scrolling into view.
+        async function handleTransition(index) {
+            const transition = document.startViewTransition(() => dialog.showModal());
+            try {
+                await transition.finished;
+            } finally {
+                document.querySelectorAll('#carousel img')[index].scrollIntoView();
+            }
+        }
+
+        const closeDialog = () => {
+            if (!document.startViewTransition) dialog.close();
+            else document.startViewTransition(() => dialog.close());
+        };
+
+        images.forEach((img, index) => {
+            console.log(index);
+            img.addEventListener('click', () => openDialog(index));
+        });
+
+        closeDialogBtn.addEventListener('click', () => closeDialog());
+
+
+    </script>
+</body>
+
+</html>

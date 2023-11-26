@@ -56,7 +56,7 @@ const New_user = mongoose.Schema({
 
 //generatinh the token for the authentication
 
-New_user.methods.generateAuthToken = async function () {
+New_user.methods.generateAuthToken = async function() {
     try {
         console.log(this._id)
         const token = jwt.sign({ _id: this._id.toString() }, "mynameischandansharmaclassnepalsecondaryschool");
@@ -68,10 +68,15 @@ New_user.methods.generateAuthToken = async function () {
 
     } catch (error) {
 
-        res.send("the error part " + error);
+       // res.send("the error part " + error);
         console.log("the error part " + error);
     }
 }
+//chandnaharma 
+
+
+//generating the another token for the authentication for pratise
+
 
 //creating the database name and validation fot the validation
 
